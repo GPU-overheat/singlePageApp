@@ -21,7 +21,7 @@ const router = async () => {
   try {
     const view = new View();
     document.querySelector("#app").innerHTML = await view.getHtml();
-	
+
   } catch (error) {
     console.error("Error loading view:", error);
     document.querySelector("#app").innerHTML = "<h1>An error occurred</h1>";
@@ -31,7 +31,7 @@ document.body.addEventListener("click", (event) => {
   const target = event.target.closest("[data-link]");
   if (target) {
     event.preventDefault();
-    navigateTo(target);	
+    navigateTo(target);
   }
 });
 
